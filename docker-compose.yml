@@ -1,0 +1,7 @@
+version: '3.4'
+
+services:
+  sql:
+    image: docker.database
+    build:
+      dockerfile: Dockerfile
