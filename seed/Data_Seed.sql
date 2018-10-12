@@ -1,12 +1,13 @@
-USE [NerdDinner]
+USE [Docker]
 GO
 
-INSERT INTO [dbo].[UserProfile] ([UserName]) VALUES ('Giancarlo')
-INSERT INTO [dbo].[UserProfile] ([UserName]) VALUES ('Monica')
-INSERT INTO [dbo].[UserProfile] ([UserName]) VALUES ('Mirko')
-INSERT INTO [dbo].[UserProfile] ([UserName]) VALUES ('Giulia')
-INSERT INTO [dbo].[UserProfile] ([UserName]) VALUES ('Augusto')
-INSERT INTO [dbo].[UserProfile] ([UserName]) VALUES ('Simona')
+INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Giancarlo')
+INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Giancarlo')
+INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Monica')
+INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Mirko')
+INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Giulia')
+INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Augusto')
+INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Simona')
 GO
 
 
