@@ -2,7 +2,6 @@ USE [Docker]
 GO
 
 INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Giancarlo')
-INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Giancarlo')
 INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Monica')
 INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Mirko')
 INSERT INTO [dbo].[Customers] ([Name]) VALUES ('Giulia')

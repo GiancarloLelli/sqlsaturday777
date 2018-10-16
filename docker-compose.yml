@@ -1,7 +1,18 @@
-version: '3.4'
+version: '3.3'
 
 services:
   sql:
-    image: docker.database
-    build:
-      dockerfile: Dockerfile
+    image: "${DTRSQLURL}:${BRANCH}"
+    ports:
+      - mode: ingress
+        target: 1433
+    deploy:
+      replicas: 1
+      placement:
+        constraints: [node.platform.os == windows]
+    networks:
+      - dockerdevops
+
+networks:
+  dockerdevops:
+    driver: overlay
