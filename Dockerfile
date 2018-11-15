@@ -17,8 +17,6 @@ ENV ACCEPT_EULA="Y" `
     DB_NAME="Docker" `
     DAC_NAME="Docker.Database"
 
-VOLUME ${DATA_PATH}
-
 WORKDIR C:\
 COPY artifacts\DacFramework.msi .
 COPY seed\Data_Seed.sql .
