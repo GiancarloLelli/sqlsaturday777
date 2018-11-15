@@ -1,5 +1,5 @@
 # escape=`
-FROM sixeyed/msbuild:netfx-4.5.2-ssdt AS builder
+FROM sixeyed/msbuild:netfx-4.7.2-ssdt AS builder
 
 WORKDIR C:\src\Docker.Database
 COPY src\Docker.Database .
