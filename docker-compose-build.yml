@@ -2,5 +2,6 @@ version: '3.3'
 services:
   sql:
    build:
+     image: sqlsaturday:${BRANCH}
      context: .
      dockerfile: Dockerfile
