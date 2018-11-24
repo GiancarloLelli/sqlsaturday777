@@ -1,12 +1,11 @@
 # escape=`
-FROM microsoft/dotnet-framework:4.7.2-sdk-windowsservercore-ltsc2016 as builder
-RUN nuget install Microsoft.Data.Tools.Msbuild -Version 10.0.61804.210
+FROM sixeyed/msbuild:netfx-4.7.2-ssdt AS builder
 
 WORKDIR C:\src\Docker.Database
 COPY src\Docker.Database .
 RUN msbuild Docker.Database.sqlproj `
-    /p:SQLDBExtensionsRefPath="C:\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46" `
-    /p:SqlServerRedistPath="C:\Microsoft.Data.Tools.Msbuild.10.0.61804.210\lib\net46"
+    /p:SQLDBExtensionsRefPath="C:\Microsoft.Data.Tools.Msbuild.10.0.61026\lib\net40" `
+    /p:SqlServerRedistPath="C:\Microsoft.Data.Tools.Msbuild.10.0.61026\lib\net40"
 
 # db image
 FROM microsoft/mssql-server-windows-developer:latest
